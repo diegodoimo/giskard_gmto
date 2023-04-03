@@ -18,6 +18,7 @@ pip install flask flask_wtf
 ```
 
 ## Install the package
+Clone the repository and mv to giskard_test folder then insall the package typing:
 ```
 python3 -m build
 pip install .
