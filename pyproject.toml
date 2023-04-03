@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gmto"
+version = "0.0.1"
+authors = [
+  { name="Diego Doimo", email="doimo.diego@gmail.com" },
+]
+description = "A web application to compute and display the odds that the Millennium Falcon reaches Endor in time and saves the galaxy."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

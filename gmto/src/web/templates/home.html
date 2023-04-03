@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <title>Survival probability calculator</title>
+</head>
+<body>
+    <main role="main" class="container">  
+        <div class="row">
+            <div class="col">
+                <!-- <h1>Upload new File</h1> -->
+                <!-- main.css code needed to render the "content-section"-->
+                <div class="content-section">
+                    <!-- action will post to the same route as we are-->
+
+                    <form method="POST" action="/" enctype="multipart/form-data">
+                        <!--cross side request forgery token releted to SECRET KEY protection-->
+                        {{form.hidden_tag()}}
+                        <!--boots stuff esthetic-->
+                        
+                            <fieldset class="form-group">
+                                <!-- mb-4: margin bottom = 4-->
+                                <legend class="border-bottom mb-4">Odds calculator</legend>
+
+                                    <div class="form-group">
+                                        <!-- will print just the label form above the box-->
+                                        {{ form.file.label(class="form-control-label") }}
+
+                                        <!-- check that the field is valid-->
+                                        {% if form.file.errors %}
+                                            {{ form.file(class="form-control form-control-lg is-invalid") }}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.file.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.file(class="form-control form-control-lg") }}
+                                        {% endif %}
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <!-- btn = 'class' bottom-->
+                                        {{ form.submit(class="btn btn-outline-info") }}
+                                    </div>
+                                
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2">Success probability:</label>
+                                        {% if probas %}
+                                        <input type="text" readonly class="form-control" id="formGroupExampleInput2", value = {{ probas}} >
+                                        {% else %}
+                                        <input type="text" readonly class="form-control" id="formGroupExampleInput2">
+                                        {% endif%}
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
