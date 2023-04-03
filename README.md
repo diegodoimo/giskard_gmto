@@ -11,7 +11,7 @@ Platforms:
 You can get miniconda from https://docs.conda.io/en/latest/miniconda.html, or install the dependencies shown below manually.
 
 ```
-conda create -n gmto_env, conda-build                                
+conda create -n gmto_env conda-build                                
 conda activate gmto_env
 pip install flask, flask_wtf
 ```
