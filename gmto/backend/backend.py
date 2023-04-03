@@ -105,7 +105,7 @@ class Backend:
             path=[self.start],
             today=0,
             autonomy=self.max_autonomy,
-            k=self.has_hunters(self.start, 0),
+            k=self.has_hunters[self.start][0],
         )
 
         states_to_explore = [initial_state]
