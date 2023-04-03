@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.scripts]
-give-me-the-odds = "gmto:cli"
+give-me-the-odds = "gmto.cli:cli"
 
