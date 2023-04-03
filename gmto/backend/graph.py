@@ -1,7 +1,5 @@
-import os
 import sqlite3
 from collections import defaultdict
-
 
 class Graph:
     """Representation of the sky map as a graph.

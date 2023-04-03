@@ -2,10 +2,10 @@ import argparse
 from .backend import get_proba
 from .helpers import read_empire_data, read_falcon_data
 
-
-#if __name__ == "__main__":
-
 def cli():
+    """
+    A wrapper function used to create the give-me-the-odds script.
+    """
     parser = argparse.ArgumentParser(description="""A command line interface to compute the probability that 
                                      the Millennium Falcon will reach the destination planet.""")
     parser.add_argument("falcon_path", help = "Path to Millennium Falcon JSON file")

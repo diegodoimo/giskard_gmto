@@ -3,7 +3,7 @@ from collections import defaultdict
 
 class State:
     def __init__(self, path: list, today: int, autonomy: int, k: int):
-        """State of the Millennium Falcon.
+        """Class defining the state of the Millennium Falcon.
 
         Parameters
         ----------
@@ -14,7 +14,7 @@ class State:
         autonomy : int
             number of days that can be travelled before stopping for fuel.
         k : int
-            number of times the bounty hunters have been in the same location (planet, day) of the Millennium Falcon.
+            number of times the bounty hunters were in the same location (planet, day) of the Millennium Falcon.
         """
         self.path = path
         self.today = today
@@ -53,8 +53,6 @@ class Backend:
         self.has_hunters = defaultdict(lambda: defaultdict(lambda: 0))
         for hunters in hunters_map:
             self.has_hunters[hunters["planet"]][hunters["day"]] = 1
-
-        self._paths = None
 
     def get_probas(self) -> float:
         """Computes the probability to arrive to the destination planet.
