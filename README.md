@@ -23,12 +23,15 @@ python3 -m build
 pip install .
 ```
 
-## Compute the probability to arrive at the destination planet from command line: 
+## Compute the probability (as percentage) to arrive at the destination planet from command line using the tests/examples/example2 setup: 
 ```
-give-me-the-odds tests/examples/example1/millennium-falcon.json tests/examples/example1/empire.json
+give-me-the-odds tests/examples/example2/millennium-falcon.json tests/examples/example2/empire.json
 ``` 
+The expected answer is 81.0.
 
 ## Run the web appliction with:
 ```
 python run_webpage.py
 ```
+Examples of empire data (in a '.json' file format) that can be uploaded on the web interface can be found in one of the directories saved in tests/examples.
+
