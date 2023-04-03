@@ -11,8 +11,9 @@ Platforms:
 You can get miniconda from https://docs.conda.io/en/latest/miniconda.html, or install the dependencies shown below manually.
 
 ```
-conda create -n gmto_env conda-build                                
+conda create -n gmto_env                                
 conda activate gmto_env
+python3 -m pip install --upgrade build
 pip install flask, flask_wtf
 ```
 
@@ -29,5 +30,5 @@ give-me-the-odds tests/examples/example1/millennium-falcon.json tests/examples/e
 
 ## Run the web appliction with:
 ```
-python run_webpage
+python run_webpage.py
 ```
