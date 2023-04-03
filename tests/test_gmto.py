@@ -1,5 +1,4 @@
 import json 
-
 from gmto.backend import get_proba
 from gmto.helpers import read_empire_data, read_falcon_data
 

@@ -24,21 +24,23 @@ app.config["FALCON_DATA_PATH"] = os.path.join(
 
 @app.route("/", methods=["GET", "POST"])
 def upload():
-    """_summary_
+    """Webpage to compute and display the probability that the 
+    Millennium Falcon reaches Endor in time and saves the galaxy.
 
     Returns
     -------
-    _type_
-        _description_
+    html
+        html template of the webpage.
     """
     form = UploadForm()
-    probas = None
+    proba = None
 
     if form.validate_on_submit():
         empire_data = json.load(form.file.data)
         falcon_data = read_falcon_data(app.config["FALCON_DATA_PATH"])
 
         # compute probability of success
-        probas = get_proba(empire_data, falcon_data)
+        proba = get_proba(empire_data, falcon_data)
+        proba = f"{proba * 100:.1f}%"
 
-    return render_template("home.html", form=form, probas=str(probas))
+    return render_template("home.html", form=form, probas=proba)
