@@ -6,7 +6,7 @@ from flask_wtf.file import FileAllowed, FileField, FileRequired
 from wtforms import SubmitField
 
 from ..backend import get_proba
-from ..helpers import read_falcon_data
+from .helpers import read_falcon_data
 
 
 class UploadForm(FlaskForm):

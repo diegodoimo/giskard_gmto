@@ -1,6 +1,6 @@
 import argparse
 from .backend import get_proba
-from .helpers import read_empire_data, read_falcon_data
+from .web.helpers import read_empire_data, read_falcon_data
 
 def cli():
     """
