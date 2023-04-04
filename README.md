@@ -18,7 +18,7 @@ pip install flask flask_wtf
 ```
 
 ## Install the package
-Clone the repository and go to giskard_test folder then install the package typing:
+Clone the repository and go to giskard_gmto folder then install the package typing:
 ```
 python3 -m build
 pip install .
