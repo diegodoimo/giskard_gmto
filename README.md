@@ -8,7 +8,7 @@ Platforms:
 
 ## Create the environment
 
-You can get miniconda from https://docs.conda.io/en/latest/miniconda.html, or install the dependencies shown below manually.
+You can get miniconda from https://docs.conda.io/en/latest/miniconda.html. Then create a conda environment and install the dependencies shown below manually
 
 ```
 conda create -n gmto_env python                                
@@ -18,7 +18,7 @@ pip install flask flask_wtf
 ```
 
 ## Install the package
-Clone the repository and go to giskard_gmto folder then install the package typing:
+Clone the repository and go to giskard_gmto folde. Then install the package typing:
 ```
 python3 -m build
 pip install .
