@@ -8,7 +8,7 @@ Platforms:
 
 ## Create the environment
 
-You can get miniconda from https://docs.conda.io/en/latest/miniconda.html. Then create a conda environment and install the dependencies shown below manually
+You can get miniconda from https://docs.conda.io/en/latest/miniconda.html. Then create a conda environment and install the dependencies shown below manually:
 
 ```
 conda create -n gmto_env python                                
