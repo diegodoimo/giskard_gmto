@@ -3,12 +3,12 @@ import os.path
 
 
 def read_empire_data(path: str):
-    """Reads the Empire .json file.
+    """Reads the Empire '.json' file.
 
     Parameters
     ----------
     path : str
-        path to the EMpire '.json' file.
+        path to the Empire '.json' file.
 
     Returns
     -------
@@ -22,7 +22,7 @@ def read_empire_data(path: str):
 
 
 def read_falcon_data(path: str):
-    """Reads the Millenium Falcon .json file. Makes the path to the routes database absolute.
+    """Reads the Millenium Falcon '.json' file. Makes the path to the routes database absolute.
 
     Parameters
     ----------
