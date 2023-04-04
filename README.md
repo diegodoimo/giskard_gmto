@@ -18,13 +18,13 @@ pip install flask flask_wtf
 ```
 
 ## Install the package
-Clone the repository and mv to giskard_test folder then insall the package typing:
+Clone the repository and go to giskard_test folder then install the package typing:
 ```
 python3 -m build
 pip install .
 ```
 
-### Compute the probability (as percentage) to arrive at the destination planet from command line using the tests/examples/example2 setup: 
+### Compute the probability (as a percentage) to arrive at the destination planet from command line using the tests/examples/example2 setup: 
 ```
 give-me-the-odds tests/examples/example2/millennium-falcon.json tests/examples/example2/empire.json
 ``` 
