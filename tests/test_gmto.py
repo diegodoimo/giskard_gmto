@@ -1,6 +1,6 @@
 import json 
 from gmto.backend import get_proba
-from gmto.web.helpers import read_empire_data, read_falcon_data
+from gmto.helpers import read_empire_data, read_falcon_data
 
 
 def test_get_proba():
